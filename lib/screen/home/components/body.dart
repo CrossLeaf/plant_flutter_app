@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'header_with_searchbox.dart';
+import 'recommend_plants.dart';
 import 'title_with_more_btn.dart';
 
 class Body extends StatelessWidget {
@@ -15,6 +16,7 @@ class Body extends StatelessWidget {
         children: [
           HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(title: "Recommended", press: () {}),
+          RecommendPlants(),
         ],
       ),
     );
