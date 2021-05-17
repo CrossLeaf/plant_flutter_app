@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_flutter_app/screen/detail/detail_screen.dart';
 
 import '../../../constants.dart';
 
@@ -10,7 +11,7 @@ class RecommendPlants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      scrollDirection:  Axis.horizontal,
+      scrollDirection: Axis.horizontal,
       child: Row(
         children: [
           RecommendPlantCard(
@@ -18,21 +19,39 @@ class RecommendPlants extends StatelessWidget {
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: (){},
+            press: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailScreen(),
+                  ));
+            },
           ),
           RecommendPlantCard(
             image: "assets/images/image_2.png",
             title: "Angelica",
             country: "Russia",
             price: 440,
-            press: (){},
+            press: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailScreen(),
+                  ));
+            },
           ),
           RecommendPlantCard(
             image: "assets/images/image_3.png",
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: (){},
+            press: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailScreen(),
+                  ));
+            },
           )
         ],
       ),
@@ -107,8 +126,8 @@ class RecommendPlantCard extends StatelessWidget {
                   Text(
                     "\$$price",
                     style: Theme.of(context).textTheme.button.copyWith(
-                      color: kPrimaryColor,
-                    ),
+                          color: kPrimaryColor,
+                        ),
                   ),
                 ],
               ),
