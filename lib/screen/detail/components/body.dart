@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:plant_flutter_app/constants.dart';
 
+import 'bottom_btn.dart';
 import 'image_and_icons.dart';
 import 'title_and_price.dart';
 
@@ -16,6 +18,8 @@ class Body extends StatelessWidget {
             country: "Russia",
             price: 440,
           ),
+          SizedBox(height: kDefaultPadding),
+          BottomBtn(size: size),
         ],
       ),
     );
